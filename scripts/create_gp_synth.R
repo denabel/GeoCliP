@@ -114,7 +114,7 @@ quantile(
 gp_synth_final_rds <-
   gp_synth_double |>
   dplyr::mutate(id = 1:dplyr::n()) |>
-  dplyr::mutate(date = "2022-12-13") |>
+  dplyr::mutate(date = "2024-12-13") |>
   dplyr::select(id, date, ags, inspid1km)
 
 # Prepare CSV dataset with coordinates
