@@ -329,11 +329,11 @@ create_dwd_weather_layer <-
     # adjust folder and file names according to the DWD website
     if (what == "air_temperature_mean") {
       folder_name <- "air_temperature_mean"
-      file_name   <- "tas_hyras_5"
+      file_name   <- "tas_hyras_1"
     }
     if (what == "air_temperature_max") {
       folder_name <- "air_temperature_max"
-      file_name   <- "tasmax_hyras_5"
+      file_name   <- "tasmax_hyras_1"
     }
     if (what == "precipitation") {
       folder_name <- "precipitation"
@@ -565,14 +565,14 @@ link_dwd_weather_single_date <- function (
 
     attributes <- dplyr::bind_cols(data, attributes)
 
-    qs::qsave(
+    qs2::qs_save(
       attributes,
       glue::glue("{where_secret}/{unique_filename}")
     )
 
     attributes
   } else {
-    qs::qread(glue::glue("{where_secret}/{unique_filename}"))
+    qs2::qs_read(glue::glue("{where_secret}/{unique_filename}"))
   }
   #
   # if(isFALSE(skip_already_run) && file.exists(unique_variable_name_location)) {
