@@ -19,6 +19,9 @@ LOCC-GER provides georeferenced data on local climate policy in Germany. The rep
 
 **File:** `./data/local_policy/NKI_full_list_21022024.xlsx`
 
+**Creation script:**
+`./scripts/local_policy_sf.R`
+
 This dataset contains **26,142 climate policy measures** from **5,033 municipalities** between **2008 and 2023**. It is based on projects funded through the German federal funding scheme **National Climate Initiative** (NKI).
 
 #### Variables
